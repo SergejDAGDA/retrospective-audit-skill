@@ -1,5 +1,7 @@
 # Retrospective Skill Audit
 
+[Русская версия](README.ru.md)
+
 A Codex skill for auditing another Codex skill against real Codex Desktop task
 history.
 
@@ -87,7 +89,10 @@ For a permanent chat dedicated to skill maintenance:
 This is my Codex Skill Lab.
 
 Show my installed user skills from:
-C:\Users\Sergei\.codex\skills
+%USERPROFILE%\.codex\skills
+
+If CODEX_HOME is set, use:
+%CODEX_HOME%\skills
 
 Separate user skills from system or third-party skills. For each skill, show:
 name, purpose, path to SKILL.md, and whether it has agents/openai.yaml,

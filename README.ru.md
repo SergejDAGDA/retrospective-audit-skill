@@ -1,5 +1,7 @@
 # Retrospective Skill Audit
 
+[English version](README.md)
+
 Codex-навык для ретроспективного аудита другого Codex-навыка по реальной
 истории задач Codex Desktop.
 
@@ -87,7 +89,10 @@ Copy-Item -Recurse `
 Это мой Codex Skill Lab.
 
 Покажи мои установленные пользовательские навыки из:
-C:\Users\Sergei\.codex\skills
+%USERPROFILE%\.codex\skills
+
+Если задан CODEX_HOME, используй:
+%CODEX_HOME%\skills
 
 Отдели пользовательские навыки от системных и сторонних. Для каждого навыка
 покажи: название, назначение, путь к SKILL.md и наличие agents/openai.yaml,
