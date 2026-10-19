@@ -1,9 +1,9 @@
 ---
-name: retrospective-skill-audit
-description: Audit a Codex skill against real past Codex Desktop task history. Use when the user asks to backtest, retrospectively audit, evaluate, calibrate, improve, or compare a SKILL.md against how work was actually done across previous Codex tasks; when repeated manual corrections, repair loops, skipped steps, stale procedures, or process drift suggest the skill may no longer match real workflow. Work read-only until the user explicitly approves edits.
+name: retrospective-audit
+description: Audit an Agent Skill against real past Codex Desktop task history. Use when the user asks to backtest, retrospectively audit, evaluate, calibrate, improve, or compare a SKILL.md against how work was actually done across previous Codex tasks; when repeated manual corrections, repair loops, skipped steps, stale procedures, or process drift suggest the skill may no longer match real workflow. Work read-only until the user explicitly approves edits.
 ---
 
-# Retrospective Skill Audit
+# Retrospective Audit
 
 ## Core rule
 

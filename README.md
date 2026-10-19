@@ -1,14 +1,19 @@
-# Retrospective Skill Audit
+# Retrospective Audit
 
 [Русская версия](README.ru.md)
 
-A Codex skill for auditing another Codex skill against real Codex Desktop task
-history.
+A portable Agent Skill for evaluating other Agent Skills against actual Codex Desktop task histories.
 
 It helps detect drift between a written `SKILL.md` workflow and how work is
 actually performed: skipped steps, repeated repair loops, manual corrections,
 stale rules, missing stop-lines, and useful deviations that should be promoted
 into the skill.
+
+**Repository:** `SergejDAGDA/retrospective-audit-skill`.
+
+**Installed Skill ID:** `retrospective-audit` (directory `skills/retrospective-audit/`, invocation `$retrospective-audit`). The GitHub-only `-skill` suffix is not part of the installed ID. The previous ID `retrospective-audit` belongs to pre-migration releases; it is **not** a runtime alias.
+
+**Package version:** `0.2.0`. Published GitHub Release and local installation must be verified independently. The supported retrospective evidence source is Codex Desktop task history; compatibility with other agents is not claimed as tested.
 
 ## What it does
 
@@ -46,9 +51,10 @@ independent examples as weak evidence, not a durable pattern.
 ├── LICENSE
 ├── README.md
 ├── README.ru.md
-└── skills/
-    └── retrospective-skill-audit/
+├── skills/
+    └── retrospective-audit/
         ├── SKILL.md
+        ├── VERSION
         ├── agents/
         │   └── openai.yaml
         └── references/
@@ -62,8 +68,8 @@ skill folder manually:
 
 ```powershell
 Copy-Item -Recurse `
-  .\skills\retrospective-skill-audit `
-  $env:USERPROFILE\.codex\skills\retrospective-skill-audit
+  .\skills\retrospective-audit `
+  $env:USERPROFILE\.codex\skills\retrospective-audit
 ```
 
 After installation, start a new Codex task so the skill list refreshes.
@@ -71,7 +77,7 @@ After installation, start a new Codex task so the skill list refreshes.
 ## Basic prompt
 
 ```text
-Use $retrospective-skill-audit.
+Use $retrospective-audit.
 
 Audit this skill in read-only mode:
 <PATH_TO_SKILL.md>
@@ -99,9 +105,11 @@ name, purpose, path to SKILL.md, and whether it has agents/openai.yaml,
 references, or scripts.
 
 Do not change anything without separate approval.
-If I choose a skill for audit, use $retrospective-skill-audit.
+If I choose a skill for audit, use $retrospective-audit.
 If I approve edits after the audit, use $skill-creator to update the skill.
 ```
+
+**Identity migration (from v0.1.1):** Previous versions used `$retrospective-skill-audit` and `skills/retrospective-skill-audit/`. Do not run both old and new IDs as simultaneous live skills. In the controlled installation stage, preserve the old payload as rollback evidence, install the new ID, verify discovery in a fresh Codex Desktop chat, and only then retire the old active directory. No automatic uninstall or file deletion is performed by this repository.
 
 ## Validation status
 
@@ -113,7 +121,7 @@ simulated from expectations.
 ## Related skills
 
 - `maintain-project-memory`: maintains durable project memory.
-- `retrospective-skill-audit`: maintains the quality of skills themselves.
+- `retrospective-audit`: maintains the quality of skills themselves.
 
 Together they form a small organizational toolkit for project and process
 continuity.

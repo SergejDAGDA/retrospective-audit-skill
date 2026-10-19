@@ -1,4 +1,0 @@
-interface:
-  display_name: "Retrospective Skill Audit"
-  short_description: "Audit skills against real task history"
-  default_prompt: "Use $retrospective-skill-audit to audit a Codex skill against my past Codex Desktop tasks in read-only mode."
