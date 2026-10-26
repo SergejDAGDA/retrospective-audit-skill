@@ -1,14 +1,19 @@
-# Retrospective Skill Audit
+# Retrospective Audit
 
 [English version](README.md)
 
-Codex-навык для ретроспективного аудита другого Codex-навыка по реальной
-истории задач Codex Desktop.
+Универсальный по формату Agent Skill для аудита других навыков по фактической истории задач Codex Desktop.
 
 Он помогает находить расхождения между тем, что написано в `SKILL.md`, и тем,
 как работа фактически выполняется: пропущенные шаги, повторяющиеся repair-циклы,
 ручные исправления, устаревшие правила, недостающие stop-lines и полезные
 отклонения, которые стоит закрепить в навыке.
+
+**GitHub-репозиторий:** `SergejDAGDA/retrospective-audit-skill`.
+
+**Имя установленного навыка:** `retrospective-audit` (каталог `skills/retrospective-audit/`, вызов `$retrospective-audit`). Суффикс `-skill` относится только к GitHub-репозиторию. Прежнее имя `retrospective-skill-audit` относится к старым релизам и **не является действующим алиасом**.
+
+**Версия пакета:** `0.2.0`. Факт публикации GitHub Release и установки необходимо проверять отдельно. Для анализа используется история задач Codex Desktop; поддержка других агентов не заявлена как проверенная.
 
 ## Что делает навык
 
@@ -47,8 +52,9 @@ Codex-навык для ретроспективного аудита друго
 ├── README.md
 ├── README.ru.md
 └── skills/
-    └── retrospective-skill-audit/
+    └── retrospective-audit/
         ├── SKILL.md
+        ├── VERSION
         ├── agents/
         │   └── openai.yaml
         └── references/
@@ -62,8 +68,8 @@ Codex-навык для ретроспективного аудита друго
 
 ```powershell
 Copy-Item -Recurse `
-  .\skills\retrospective-skill-audit `
-  $env:USERPROFILE\.codex\skills\retrospective-skill-audit
+  .\skills\retrospective-audit `
+  $env:USERPROFILE\.codex\skills\retrospective-audit
 ```
 
 После установки откройте новую задачу Codex, чтобы список навыков обновился.
@@ -71,7 +77,7 @@ Copy-Item -Recurse `
 ## Базовый промпт
 
 ```text
-Используй $retrospective-skill-audit.
+Используй $retrospective-audit.
 
 Проведи read-only аудит навыка:
 <PATH_TO_SKILL.md>
@@ -99,10 +105,12 @@ Copy-Item -Recurse `
 references или scripts.
 
 Ничего не меняй без отдельного подтверждения.
-Если я выберу навык для аудита, используй $retrospective-skill-audit.
+Если я выберу навык для аудита, используй $retrospective-audit.
 Если после аудита я одобрю правки, используй $skill-creator для обновления
 навыка.
 ```
+
+**Миграция с v0.1.1:** В прежних выпусках использовались `$retrospective-skill-audit` и каталог `skills/retrospective-skill-audit/`. Нельзя оставлять оба идентификатора одновременно активными. При отдельной установке нужно сохранить прежний пакет для отката, установить новый ID, проверить обнаружение в новом чате Codex Desktop и только после этого вывести старый активный каталог из использования. Репозиторий ничего автоматически не удаляет.
 
 ## Статус проверки
 
@@ -114,7 +122,7 @@ evidence, а не на симуляцию ожиданий.
 ## Связанные навыки
 
 - `maintain-project-memory`: ведёт долговременную память проекта.
-- `retrospective-skill-audit`: поддерживает качество самих навыков.
+- `retrospective-audit`: поддерживает качество самих навыков.
 
 Вместе они образуют небольшой организационный набор для ведения проектов и
 процессов.
