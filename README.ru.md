@@ -11,7 +11,7 @@
 
 **GitHub-репозиторий:** `SergejDAGDA/retrospective-audit-skill`.
 
-**Имя установленного навыка:** `retrospective-audit` (каталог `skills/retrospective-audit/`, вызов `$retrospective-audit`). Суффикс `-skill` относится только к GitHub-репозиторию. Прежнее имя `retrospective-audit` относится к старым релизам и **не является действующим алиасом**.
+**Имя установленного навыка:** `retrospective-audit` (каталог `skills/retrospective-audit/`, вызов `$retrospective-audit`). Суффикс `-skill` относится только к GitHub-репозиторию. Прежнее имя `retrospective-skill-audit` относится к старым релизам и **не является действующим алиасом**.
 
 **Версия пакета:** `0.2.0`. Факт публикации GitHub Release и установки необходимо проверять отдельно. Для анализа используется история задач Codex Desktop; поддержка других агентов не заявлена как проверенная.
 

@@ -11,7 +11,7 @@ into the skill.
 
 **Repository:** `SergejDAGDA/retrospective-audit-skill`.
 
-**Installed Skill ID:** `retrospective-audit` (directory `skills/retrospective-audit/`, invocation `$retrospective-audit`). The GitHub-only `-skill` suffix is not part of the installed ID. The previous ID `retrospective-audit` belongs to pre-migration releases; it is **not** a runtime alias.
+**Installed Skill ID:** `retrospective-audit` (directory `skills/retrospective-audit/`, invocation `$retrospective-audit`). The GitHub-only `-skill` suffix is not part of the installed ID. The previous ID `retrospective-skill-audit` belongs to pre-migration releases; it is **not** a runtime alias.
 
 **Package version:** `0.2.0`. Published GitHub Release and local installation must be verified independently. The supported retrospective evidence source is Codex Desktop task history; compatibility with other agents is not claimed as tested.
 
